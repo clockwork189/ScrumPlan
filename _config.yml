@@ -4,4 +4,5 @@ destination: ./app
 lsi: false
 pygments: true
 permalink: pretty
+url: http://scrumplan.com
 exclude: ['jekyll','sass','config.rb','humans.txt','robots.txt','LICENSE','README']
