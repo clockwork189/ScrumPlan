@@ -1,0 +1,55 @@
+
+	<div id="login-form" class="reveal-modal">
+	  <h2>Please Log In</h2>
+	  <input type="email" class="email" placeholder="eg. MappedIn">
+		<input type="password" class="password" placeholder="eg. Mappedin">
+		<button class="accept button">Accept</button>
+	</div>
+	<div id="company-selection" class="reveal-modal">
+	  <h2>Select a Company</h2>
+	  <input type="text" class="company-input" placeholder="eg. MappedIn">
+		<button class="company-accept button">Accept</button>
+	</div>
+	
+
+	<!-- Foundation JS Files (Uncompressed) -->
+	<script src="javascripts/foundation/jquery.js"></script>
+	<script src="javascripts/foundation/jquery.cookie.js"></script>
+	<script src="javascripts/foundation/jquery.event.move.js"></script>
+	<script src="javascripts/foundation/jquery.event.swipe.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.accordion.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.alerts.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.buttons.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.clearing.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.forms.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.joyride.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.magellan.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.mediaQueryToggle.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.navigation.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.orbit.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.reveal.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.tabs.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.tooltips.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.topbar.js"></script>
+	<script src="javascripts/foundation/jquery.placeholder.js"></script>
+	
+	<!-- ScrumPlan Files -->
+	<script src="javascripts/ScrumPlan/ScrumForm.js"></script>
+	<script src="javascripts/ScrumPlan/ScrumData.js"></script>
+	<script src="javascripts/ScrumPlan/ScrumApps.js"></script>
+	
+	<!-- Firebase Files -->
+	<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+	<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase-auth-client.js'></script>
+	
+	<!-- Other JS Files -->
+	<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+	<script src="javascripts/jquery.ui.js"></script>
+	<script src="javascripts/jquery.chosen.js"></script>
+	<script src="javascripts/jquery.address.js"></script>
+
+  <!-- Application Javascript, safe to override -->
+  <script src="javascripts/foundation/app.js"></script>
+	
+</body>
+</html>
