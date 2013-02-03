@@ -141,7 +141,7 @@
 		$.address.title(/>([^<]*)<\/title/.exec(data)[1]);
 	};
 	
-	$.address.state('/ScrumPlan/').init(function() {
+	$.address.state('/').init(function() {
 
 		// Initializes the plugin
 		$('nav a').address();
