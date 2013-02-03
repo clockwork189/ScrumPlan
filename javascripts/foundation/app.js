@@ -141,7 +141,7 @@
 		$.address.title(/>([^<]*)<\/title/.exec(data)[1]);
 	};
 	
-	$.address.state('/').init(function() {
+	$.address.state('/app/').init(function() {
 
 		// Initializes the plugin
 		$('nav a').address();
