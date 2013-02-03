@@ -1,6 +1,6 @@
 var ScrumData = function (company, onDataUpdate) {
 	var self = {},
-		rootRef = new Firebase('https://mitchellbutler.firebaseIO.com/'),
+		rootRef = new Firebase('https://scrumplan.firebaseIO.com/'),
 		companyRef = rootRef.child('companies').child(company);
 	
 	self.tasks = {};

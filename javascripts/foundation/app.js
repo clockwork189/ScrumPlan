@@ -27,7 +27,7 @@
 	});
 	
 	
-	var rootRef = new Firebase('https://mitchellbutler.firebaseIO.com/');
+	var rootRef = new Firebase('https://scrumplan.firebaseIO.com/');
 	var authClient = new FirebaseAuthClient(rootRef, function(error, user) {
 		if (error) {
 		  // an error occurred while attempting login
@@ -53,10 +53,10 @@
 		}
 	});
 	
-	// scrumAuth.authClient.createUser('mitchellbutler@gmail.com', 'password', function(error, user) {
+	// authClient.createUser('mitchellbutler@gmail.com', 'password', function(error, user) {
 	// 	  if (!error) {
 	// 	    console.log('User Id: ' + user.id + ', Email: ' + user.email);
-	// 	  }
+	//  	  }
 	// 	});
 	
 	var init = true,
