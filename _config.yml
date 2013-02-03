@@ -1,0 +1,7 @@
+safe: true
+source: ./jekyll
+destination: ./app
+lsi: false
+pygments: true
+permalink: pretty
+exclude: ['jekyll','sass','config.rb','humans.txt','robots.txt','LICENSE','README']

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>ScrumPlan</title>
+
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="stylesheets/app.css">
+
+	<script src="javascripts/foundation/modernizr.foundation.js"></script>
+
+</head>
+<body>
+
+	<!-- Basic Navigation -->
+	<nav class="top-bar">
+	  <ul>
+	    <li class="name"><h1><a href="/">ScrumPlan</a></h1></li>
+	  </ul>
+	  <section>
+	    <ul class="right">
+	      <li><a href="manage">Manage</a></li>
+				<li><a href="board">Board</a></li>
+				<li><a href="list">List</a></li>
+				<li><a href="stats">Stats</a></li>
+	    </ul>
+	  </section>
+	</nav>
+	
+	<div id="loading">
+		Loading...
+	</div>
+	<div id="content" data-app="manage">
+		<div class="row">
+			<h4>People</h4>
+		</div>
+	
+		<div class="row">
+			<div class="people-container">
+				Loading...
+			</div>
+		</div>
+	
+		<form class="person-creation">
+	    <div class="row">
+	      <div class="two mobile-one columns">
+	        <label class="right inline">First Name:</label>
+	      </div>
+	      <div class="ten mobile-three columns">
+	        <input type="text" placeholder="eg. Mitchell" class="eight first-name">
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="two mobile-one columns">
+	        <label class="right inline">Last Name:</label>
+	      </div>
+	      <div class="ten mobile-three columns">
+	        <input type="text" class="eight last-name">
+	      </div>
+	    </div>
+			<div class="row">
+	      <div class="two mobile-one columns">
+	        <label class="right inline">Title:</label>
+	      </div>
+	      <div class="ten mobile-three columns">
+	        <input type="text" class="eight title">
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="two mobile-one columns">
+	        <label class="right inline">Gravatar Email:</label>
+	      </div>
+	      <div class="ten mobile-three columns">
+	        <input type="text" class="eight gravatar">
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="two mobile-one columns">
+	        <label class="right inline">User ID:</label>
+	      </div>
+	      <div class="ten mobile-three columns">
+	        <input type="text" class="eight id">
+	      </div>
+	    </div>
+			<div class="actions row">
+				<a class="success radius button create">Create Person</a>
+				<a class="radius button cancel">Cancel</a>
+			</div>
+	  </form>
+		
+		<div class="row">
+			<h4>Projects</h4>
+		</div>
+		
+		
+		<div class="row">
+			<div class="projects-container">
+				Loading...
+			</div>
+		</div>
+	
+		<form class="project-creation">
+	    <div class="row">
+	      <div class="two mobile-one columns">
+	        <label class="right inline">Project Name:</label>
+	      </div>
+	      <div class="ten mobile-three columns">
+	        <input type="text" class="eight project-name">
+	      </div>
+	    </div>
+			<div class="actions row">
+				<a class="success radius button create">Create Project</a>
+				<a class="radius button cancel">Cancel</a>
+			</div>
+	  </form>
+	
+		<div class="row">
+			<h4>Tasks</h4>
+		</div>
+	
+		<div class="row">
+			<div class="tasks-container">
+				Loading...
+			</div>
+		</div>
+	
+		<form class="task-creation">
+	    <div class="row">
+	      <div class="two mobile-one columns">
+	        <label class="right inline">Project:</label>
+	      </div>
+	      <div class="ten mobile-three columns">
+	        <select class="eight project chzn-select"></select>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="two mobile-one columns">
+	        <label class="right inline">Delegates:</label>
+	      </div>
+	      <div class="ten mobile-three columns">
+	        <select class="eight delegates chzn-select" multiple></select>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="two mobile-one columns">
+	        <label class="right inline">Task Name:</label>
+	      </div>
+	      <div class="ten mobile-three columns">
+	        <input type="text" placeholder="Describe the Task" class="eight name">
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="two mobile-one columns">
+	        <label class="right inline">Time Estimate:</label>
+	      </div>
+	      <div class="ten mobile-three columns">
+	        <input type="text" class="eight time">
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="two mobile-one columns">
+	        <label class="right inline">Priority:</label>
+	      </div>
+	      <div class="ten mobile-three columns">
+	        <input type="text" class="eight priority">
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="two mobile-one columns">
+	        <label class="right inline">Status:</label>
+	      </div>
+	      <div class="ten mobile-three columns">
+	        <select class="eight status chzn-select"></select>
+	      </div>
+	    </div>
+	    <div class="row">
+	      <div class="two mobile-one columns">
+	        <label class="right inline">Notes:</label>
+	      </div>
+	      <div class="ten mobile-three columns">
+	        <textarea type="text" class="eight notes"></textarea>
+	      </div>
+	    </div>
+			<div class="actions row">
+				<a class="success radius button create">Create Task</a>
+				<a class="radius button cancel">Cancel</a>
+			</div>
+	  </form>
+	</div>
+
+	<div id="login-form" class="reveal-modal">
+	  <h2>Please Log In</h2>
+	  <input type="email" class="email" placeholder="eg. MappedIn">
+		<input type="password" class="password" placeholder="eg. Mappedin">
+		<button class="accept button">Accept</button>
+	</div>
+	<div id="company-selection" class="reveal-modal">
+	  <h2>Select a Company</h2>
+	  <input type="text" class="company-input" placeholder="eg. MappedIn">
+		<button class="company-accept button">Accept</button>
+	</div>
+	
+
+	<!-- Foundation JS Files (Uncompressed) -->
+	<script src="javascripts/foundation/jquery.js"></script>
+	<script src="javascripts/foundation/jquery.cookie.js"></script>
+	<script src="javascripts/foundation/jquery.event.move.js"></script>
+	<script src="javascripts/foundation/jquery.event.swipe.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.accordion.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.alerts.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.buttons.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.clearing.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.forms.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.joyride.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.magellan.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.mediaQueryToggle.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.navigation.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.orbit.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.reveal.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.tabs.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.tooltips.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.topbar.js"></script>
+	<script src="javascripts/foundation/jquery.placeholder.js"></script>
+	
+	<!-- ScrumPlan Files -->
+	<script src="javascripts/ScrumPlan/ScrumForm.js"></script>
+	<script src="javascripts/ScrumPlan/ScrumData.js"></script>
+	<script src="javascripts/ScrumPlan/ScrumApps.js"></script>
+	
+	<!-- Firebase Files -->
+	<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+	<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase-auth-client.js'></script>
+	
+	<!-- Other JS Files -->
+	<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+	<script src="javascripts/jquery.ui.js"></script>
+	<script src="javascripts/jquery.chosen.js"></script>
+	<script src="javascripts/jquery.address.js"></script>
+
+  <!-- Application Javascript, safe to override -->
+  <script src="javascripts/foundation/app.js"></script>
+	
+</body>
+</html>
