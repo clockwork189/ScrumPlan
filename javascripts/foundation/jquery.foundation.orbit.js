@@ -94,11 +94,11 @@
       });
 
       this.$element.bind('orbit.next', function () {
-        shift('next');
+        self.shift('next');
       });
 
       this.$element.bind('orbit.prev', function () {
-        shift('prev');
+        self.shift('prev');
       });
 
       this.$element.bind('swipeleft', function () {
@@ -110,15 +110,15 @@
       });
 
       this.$element.bind('orbit.goto', function (event, index) {
-        shift(index);
+        self.shift(index);
       });
 
       this.$element.bind('orbit.start', function (event, index) {
-        startClock();
+        self.startClock();
       });
 
       this.$element.bind('orbit.stop', function (event, index) {
-        stopClock();
+        self.stopClock();
       });
 
       $imageSlides = this.$slides.filter('img');
@@ -129,7 +129,7 @@
         $imageSlides.bind('imageready', function () {
           imagesLoadedCount += 1;
           if (imagesLoadedCount === $imageSlides.length) {
-            loaded();
+            self.loaded();
           }
         });
       }
@@ -196,10 +196,10 @@
       var self = this,
           $fluidPlaceholder;
 
-      $element.add($wrapper).width(this.$slides.first().outerWidth());
-      $element.add($wrapper).height(this.$slides.first().height());
-      orbitWidth = this.$slides.first().outerWidth();
-      orbitHeight = this.$slides.first().height();
+      self.$element.add(self.$wrapper).width(this.$slides.first().outerWidth());
+      self.$element.add(self.$wrapper).height(this.$slides.first().height());
+      self.orbitWidth = this.$slides.first().outerWidth();
+      self.orbitHeight = this.$slides.first().height();
       $fluidPlaceholder = this.$slides.first().findFirstImage().clone();
 
 
@@ -208,16 +208,16 @@
             slideWidth = slide.outerWidth(),
             slideHeight = slide.height();
 
-        if (slideWidth > $element.outerWidth()) {
-          $element.add($wrapper).width(slideWidth);
-          orbitWidth = $element.outerWidth();
+        if (slideWidth > self.$element.outerWidth()) {
+          self.$element.add(self.$wrapper).width(slideWidth);
+          self.orbitWidth = self.$element.outerWidth();
         }
-        if (slideHeight > $element.height()) {
-          $element.add($wrapper).height(slideHeight);
-          orbitHeight = $element.height();
+        if (slideHeight > self.$element.height()) {
+          self.$element.add(self.$wrapper).height(slideHeight);
+          self.orbitHeight = self.$element.height();
           $fluidPlaceholder = $(this).findFirstImage().clone();
         }
-        numberSlides += 1;
+        self.numberSlides += 1;
       });
 
       if (this.options.fluid) {
@@ -232,14 +232,14 @@
           //$fluidPlaceholder = $("<div style='display:inline-block;width:2px;height:1px;'></div>");
         }
 
-        $element.prepend($fluidPlaceholder);
+        self.$element.prepend($fluidPlaceholder);
         $fluidPlaceholder.addClass('fluid-placeholder');
-        $element.add($wrapper).css({width: 'inherit'});
-        $element.add($wrapper).css({height: 'inherit'});
+        self.$element.add(self.$wrapper).css({width: 'inherit'});
+        self.$element.add(self.$wrapper).css({height: 'inherit'});
 
         $(window).bind('resize', function () {
-          orbitWidth = $element.outerWidth();
-          orbitHeight = $element.height();
+          self.orbitWidth = self.$element.outerWidth();
+          self.orbitHeight = self.$element.height();
         });
       }
     },
@@ -268,7 +268,7 @@
         .css({"z-index" : 3, "opacity" : 1})
         .fadeIn(function() {
           //brings in all other slides IF css declares a display: none
-          $slides.css({"display":"block"})
+          self.$slides.css({"display":"block"})
       });
     },
 
@@ -281,7 +281,7 @@
 
       if (this.$timer.is(':hidden')) {
         this.clock = setInterval(function () {
-          $element.trigger('orbit.next');
+          self.$element.trigger('orbit.next');
         }, this.options.advanceSpeed);
       } else {
         this.timerRunning = true;
@@ -350,8 +350,8 @@
       var self = this;
 
       this.outTimer = setTimeout(function() {
-        if(!timerRunning){
-          startClock();
+        if(!self.timerRunning){
+          self.startClock();
         }
       }, this.options.startClockOnMouseOutAfter)
     },
@@ -435,21 +435,21 @@
       this.$wrapper.append($directionalNav);
 
       this.$wrapper.find('.left').click(function () {
-        stopClock();
-        if (options.resetTimerOnClick) {
-          rotateTimer(true);
-          startClock();
+        self.stopClock();
+        if (self.options.resetTimerOnClick) {
+          self.rotateTimer(true);
+          self.startClock();
         }
-        $element.trigger('orbit.prev');
+        self.$element.trigger('orbit.prev');
       });
 
       this.$wrapper.find('.right').click(function () {
-        stopClock();
-        if (options.resetTimerOnClick) {
-          rotateTimer(true);
-          startClock();
+        self.stopClock();
+        if (self.options.resetTimerOnClick) {
+          self.rotateTimer(true);
+          self.startClock();
         }
-        $element.trigger('orbit.next');
+        self.$element.trigger('orbit.next');
       });
     },
 
@@ -479,12 +479,12 @@
       this.$bullets.append($li);
       $li.data('index', index);
       $li.click(function () {
-        stopClock();
-        if (options.resetTimerOnClick) {
-          rotateTimer(true);
-          startClock();
+        self.stopClock();
+        if (self.options.resetTimerOnClick) {
+          self.rotateTimer(true);
+          self.startClock();
         }
-        $element.trigger('orbit.goto', [$li.data('index')])
+        self.$element.trigger('orbit.goto', [$li.data('index')])
       });
     },
 
