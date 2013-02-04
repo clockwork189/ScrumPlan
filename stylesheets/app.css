@@ -2792,7 +2792,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   position: absolute;
   top: 0;
   left: -20px;
-  background: url('/images/foundation/orbit/rotator-black.png?1359758913') no-repeat;
+  background: url('/images/foundation/orbit/rotator-black.png?1359932226') no-repeat;
   z-index: 3;
 }
 /* line 27, ../../../.rvm/gems/ruby-1.9.3-p194/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_orbit.scss */
@@ -2814,7 +2814,7 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 .orbit-wrapper span.mask.move {
   width: 40px;
   left: 0;
-  background: url('/images/foundation/orbit/timer-black.png?1359758913') repeat 0 0;
+  background: url('/images/foundation/orbit/timer-black.png?1359932226') repeat 0 0;
 }
 /* line 32, ../../../.rvm/gems/ruby-1.9.3-p194/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_orbit.scss */
 .orbit-wrapper span.pause {
@@ -2824,13 +2824,13 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
   position: absolute;
   top: 0;
   left: 0;
-  background: url('/images/foundation/orbit/pause-black.png?1359758913') no-repeat;
+  background: url('/images/foundation/orbit/pause-black.png?1359932226') no-repeat;
   z-index: 4;
   opacity: 0;
 }
 /* line 33, ../../../.rvm/gems/ruby-1.9.3-p194/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_orbit.scss */
 .orbit-wrapper span.pause.active {
-  background: url('/images/foundation/orbit/pause-black.png?1359758913') no-repeat 0 -40px;
+  background: url('/images/foundation/orbit/pause-black.png?1359932226') no-repeat 0 -40px;
 }
 /* line 35, ../../../.rvm/gems/ruby-1.9.3-p194/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_orbit.scss */
 .orbit-wrapper .timer:hover span.pause, .orbit-wrapper .timer:focus span.pause, .orbit-wrapper span.pause.active {
@@ -2877,24 +2877,24 @@ ul.flyout li.active a, .nav-bar li ul li.active a {
 }
 /* line 48, ../../../.rvm/gems/ruby-1.9.3-p194/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_orbit.scss */
 .orbit-wrapper .slider-nav span.right {
-  background: url('/images/foundation/orbit/right-arrow.png?1359758913');
+  background: url('/images/foundation/orbit/right-arrow.png?1359932226');
   background-size: 100%;
   right: 0;
 }
 /* line 49, ../../../.rvm/gems/ruby-1.9.3-p194/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_orbit.scss */
 .orbit-wrapper .slider-nav span.left {
-  background: url('/images/foundation/orbit/left-arrow.png?1359758913');
+  background: url('/images/foundation/orbit/left-arrow.png?1359932226');
   background-size: 100%;
   left: 0;
 }
 
 /* line 54, ../../../.rvm/gems/ruby-1.9.3-p194/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_orbit.scss */
 .lt-ie9 .orbit-wrapper .slider-nav span.right {
-  background: url('/images/foundation/orbit/right-arrow-small.png?1359758913');
+  background: url('/images/foundation/orbit/right-arrow-small.png?1359932226');
 }
 /* line 55, ../../../.rvm/gems/ruby-1.9.3-p194/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_orbit.scss */
 .lt-ie9 .orbit-wrapper .slider-nav span.left {
-  background: url('/images/foundation/orbit/left-arrow-small.png?1359758913');
+  background: url('/images/foundation/orbit/left-arrow-small.png?1359932226');
 }
 
 /* Bullet Nav ---------------------- */
@@ -2915,7 +2915,7 @@ ul.orbit-bullets li {
   cursor: pointer;
   color: #999999;
   text-indent: -9999px;
-  background: url('/images/foundation/orbit/bullets.jpg?1359758913') no-repeat 4px 0;
+  background: url('/images/foundation/orbit/bullets.jpg?1359932226') no-repeat 4px 0;
   width: 13px;
   height: 12px;
   overflow: hidden;
@@ -6623,16 +6623,22 @@ table.hide-for-medium {
 }
 
 /* line 78, ../sass/app.scss */
-.scrum-board {
+table.scrum-board {
   width: 100%;
+  margin-top: -30px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
 }
-/* line 80, ../sass/app.scss */
-.scrum-board .project-title {
+/* line 82, ../sass/app.scss */
+table.scrum-board .project-title {
   font-weight: bold;
   width: 150px;
 }
-/* line 84, ../sass/app.scss */
-.scrum-board td {
+/* line 86, ../sass/app.scss */
+table.scrum-board td {
   padding: 20px;
   -webkit-transition-property: background-color;
   -moz-transition-property: background-color;
@@ -6643,19 +6649,19 @@ table.hide-for-medium {
   -o-transition-duration: 1s;
   transition-duration: 1s;
 }
-/* line 88, ../sass/app.scss */
-.scrum-board td.drag-over {
+/* line 90, ../sass/app.scss */
+table.scrum-board td.drag-over {
   background: #EFEFEF;
 }
-/* line 91, ../sass/app.scss */
-.scrum-board td > div {
+/* line 93, ../sass/app.scss */
+table.scrum-board td > div {
   max-width: 200px;
   min-height: 100px;
   float: left;
   margin-right: 10px;
 }
 
-/* line 100, ../sass/app.scss */
+/* line 102, ../sass/app.scss */
 div.task-box {
   display: block;
   padding: 6px 7px 7px;
@@ -6673,25 +6679,25 @@ div.task-box {
   text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
   position: relative;
 }
-/* line 103, ../sass/app.scss */
+/* line 105, ../sass/app.scss */
 div.task-box.success {
   background-color: #5da423;
   color: #fff;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
 }
-/* line 104, ../sass/app.scss */
+/* line 106, ../sass/app.scss */
 div.task-box.alert {
   background-color: #c60f13;
   color: #fff;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
 }
-/* line 105, ../sass/app.scss */
+/* line 107, ../sass/app.scss */
 div.task-box.secondary {
   background-color: #e9e9e9;
   color: #505050;
   text-shadow: 0 1px rgba(255, 255, 255, 0.3);
 }
-/* line 107, ../sass/app.scss */
+/* line 109, ../sass/app.scss */
 div.task-box a.close {
   color: #333;
   position: absolute;
@@ -6701,11 +6707,11 @@ div.task-box a.close {
   opacity: 0.2;
   padding: 4px;
 }
-/* line 108, ../sass/app.scss */
+/* line 110, ../sass/app.scss */
 div.task-box a.close:hover, div.task-box a.close:focus {
   opacity: 0.4;
 }
-/* line 110, ../sass/app.scss */
+/* line 112, ../sass/app.scss */
 div.task-box.selected {
   background-color: #f9f9f9 !important;
 }
