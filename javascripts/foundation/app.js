@@ -69,9 +69,26 @@
 		// Sets up ChosenJS
 		$(".chzn-select").chosen();
 		
-		if (currentCompany) {
-			
-			scrumData = new ScrumData(currentCompany);
+		var rootRef = new Firebase('https://scrumplan.firebaseIO.com/');
+		rootRef.child('companies').once('value', function(data) {
+			var companies = data.val();
+		  for (var c in companies) {
+				var people = companies[c]['people'];
+		  	for (var p in people) {
+		  		if (people[p]['id'] == userID) {
+						currentCompany = c;
+		  			break;
+		  		}
+		  	}
+				if (currentCompany) { break; }
+		  }
+			if (currentCompany) {
+				setupCompany(currentCompany);
+			}
+		});
+		
+		function setupCompany(currentCompany) {
+			scrumData = new ScrumData(rootRef, currentCompany);
 			scrumForm = new ScrumForm(scrumData);
 			
 			if (app == 'home') {
@@ -109,26 +126,6 @@
 				currentApp.onDataUpdate('projects', {projects: scrumData.projects});
 			});
 			
-		} else {
-			// Sets up the Company
-			$("#company-selection")
-				.reveal()
-				.find('.company-accept')
-				.click(function(){
-					currentCompany = $(this).siblings('.company-input').val();
-					$(this).parents().trigger('reveal:close');
-					initializePage($("#content").data('app'));
-				})
-				.siblings('.company-input')
-				.focus()
-				.bind('keypress', function(e) {
-				  var code = (e.keyCode ? e.keyCode : e.which);
-				  if(code == 13) { 
-						$(this)
-							.siblings('.company-accept')
-							.trigger('click');
-				  }
-				});
 		}
 		
 	}
